@@ -31,17 +31,22 @@ public class Porridge : MonoBehaviour
 
     }
 
-  
+    private void Update()
+    {
+        EatPorridge();
+    }
 
     // Update is called once per frame
-    void Update()
+    private void EatPorridge()
     {
+
         if (porridgeRunOnce == false)
         {
             if(porridgeAmount == 0)
             {
                 Debug.Log("The bowl is empty. Get up, and walk away from the table. ");
                 porridgeRunOnce = true;
+                this.enabled = false;
             }
         }
         
